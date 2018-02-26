@@ -23,5 +23,6 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('lottos/', views.index, name='lotto'),
     path('lottos/new/', views.post, name='new_lotto'),
+    path('lotto/<int:pk>/detail/', views.detail, name='detail'),
 
 ]
