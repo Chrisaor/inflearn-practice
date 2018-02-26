@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'lotto.apps.LottoConfig',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
