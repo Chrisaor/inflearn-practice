@@ -5,13 +5,17 @@ from lotto.forms import PostForm
 from lotto.models import GuessNumbers
 
 
+def default(request):
+
+    return render(request, 'lotto/default.html')
+
 def index(request):
 
     lottos = GuessNumbers.objects.all()
     context = {
         'lottos' : lottos,
     }
-    return render(request, 'lotto/default.html', context)
+    return render(request, 'lotto/index.html', context)
 
 
 def post(request):

@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'lotto.apps.LottoConfig',
+    'vote.apps.VoteConfig',
     'django_extensions',
 ]
 
