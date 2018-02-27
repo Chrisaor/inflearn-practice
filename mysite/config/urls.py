@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.default, name='default'),
     path('lottos/', include('lotto.urls')),
+    path('votes/', include('vote.urls')),
 ]
