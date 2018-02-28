@@ -8,16 +8,18 @@
     <title>Document</title>
 </head>
 <body>
-<h1>설문조사 페이지</h1>
 
-{% if latest_question_list %}
+<h1>{{ question.question_text }}</h1>
+
 <ul>
-    {% for question in latest_question_list %}
-    <li><a href="{% url 'vote:detail' pk=question.pk %}">{{ question.question_text }}</a></li>
-    {% endfor %}
+    {% for choice in question.choice_set.all %}
+    <li>
+        {{ choice.choice_text }} -- {{ choice.votes }} 득표
+        {% endfor %}
+    </li>
 </ul>
-{% else %}
-<p>No polls are available</p>
-{% endif %}
+
+<a href="{% url 'vote:detail' question.id %}">다시 투표하기</a>
+
 </body>
 </html>
