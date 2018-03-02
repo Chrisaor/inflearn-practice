@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 
     'lotto.apps.LottoConfig',
     'vote.apps.VoteConfig',
+    'kilogram.apps.KilogramConfig',
     'django_extensions',
 ]
 

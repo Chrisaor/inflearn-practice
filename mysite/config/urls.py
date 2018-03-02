@@ -23,4 +23,5 @@ urlpatterns = [
     path('', views.default, name='default'),
     path('lottos/', include('lotto.urls')),
     path('votes/', include('vote.urls')),
+    path('kilogram/', include('kilogram.urls')),
 ]
